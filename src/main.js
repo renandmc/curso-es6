@@ -187,4 +187,39 @@ import funcaoSoma2 from './soma';
 
 console.log(funcaoSoma2(3, 3));
 
+// webpack dev server
 alert('Blz');
+
+// async/await
+const minhaPromise = () => new Promise((resolve, reject) => {
+  setTimeout(() => { resolve('OK') }, 2000);
+});
+
+minhaPromise().then(response => {
+  console.log(response, 'promise then');
+});
+
+async function executaPromise() {
+  // async/await
+  console.log(await minhaPromise(), 'await/async ex1');
+  console.log(await minhaPromise(), 'await/async ex1');
+  console.log(await minhaPromise(), 'await/async ex1');
+  // promise then
+  minhaPromise().then(response => {
+    console.log(response, 'promise then ex1');
+    minhaPromise().then(response => {
+      console.log(response, 'promise then ex1');
+      minhaPromise().then(response => {
+        console.log(response, 'promise then ex1');
+      })
+    })
+  })
+}
+executaPromise();
+
+const executaPromise2 = async () => {
+  console.log(await minhaPromise(), 'await/async ex2');
+  console.log(await minhaPromise(), 'await/async ex2');
+  console.log(await minhaPromise(), 'await/async ex2');
+}
+executaPromise2();
