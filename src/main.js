@@ -186,3 +186,5 @@ console.log(funcoes.sub(3, 1));
 import funcaoSoma2 from './soma';
 
 console.log(funcaoSoma2(3, 3));
+
+alert('Blz');
