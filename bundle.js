@@ -240,4 +240,9 @@ var usuarioB = _objectSpread({}, usuarioA, {
 });
 
 console.log(usuarioA);
-console.log(usuarioB);
+console.log(usuarioB); // template literals
+
+var nomeA = 'Renan';
+var idadeA = 26; //console.log('Meu nome é ' + nomeA + ' e tenho ' + idadeA + ' anos');
+
+console.log("Meu nome \xE9 ".concat(nomeA, " e tenho ").concat(idadeA, " anos"));

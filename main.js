@@ -160,3 +160,9 @@ const usuarioA = {
 const usuarioB = { ...usuarioA, nome: 'João' };
 console.log(usuarioA);
 console.log(usuarioB);
+
+// template literals
+const nomeA = 'Renan';
+const idadeA = 26;
+//console.log('Meu nome é ' + nomeA + ' e tenho ' + idadeA + ' anos');
+console.log(`Meu nome é ${nomeA} e tenho ${idadeA} anos`);
