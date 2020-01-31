@@ -160,4 +160,28 @@ var soma2 = function soma2() {
 };
 
 console.log(soma2(1));
-console.log(soma2());
+console.log(soma2()); // desestruturação
+
+var usuario2 = {
+  nome: 'Renan',
+  idade: 26,
+  endereco: {
+    cidade: 'Ourinhos',
+    estado: 'SP'
+  }
+};
+console.log(usuario2);
+var nome = usuario2.nome,
+    idade = usuario2.idade,
+    cidade = usuario2.endereco.cidade;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+function mostraNome(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
+}
+
+mostraNome(usuario2);

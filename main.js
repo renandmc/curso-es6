@@ -105,3 +105,24 @@ console.log(soma());
 const soma2 = (a = 3, b = 6) => a + b;
 console.log(soma2(1));
 console.log(soma2());
+
+// desestruturação
+const usuario2 = {
+  nome: 'Renan',
+  idade: 26,
+  endereco: {
+    cidade: 'Ourinhos',
+    estado: 'SP'
+  }
+}
+console.log(usuario2);
+
+const { nome, idade, endereco: { cidade } } = usuario2;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+function mostraNome({ nome, idade }) {
+  console.log(nome, idade);
+}
+mostraNome(usuario2);
