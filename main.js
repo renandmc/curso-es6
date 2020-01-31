@@ -177,7 +177,12 @@ const user = {
 };
 console.log(user);
 
-// aula webpack
-import { somaZ } from './funcoes';
+// aula webpack - import/export
+import * as funcoes from './funcoes';
 
-console.log(somaZ(1, 3));
+console.log(funcoes.somaZ(2, 2));
+console.log(funcoes.sub(3, 1));
+
+import funcaoSoma2 from './soma';
+
+console.log(funcaoSoma2(3, 3));
