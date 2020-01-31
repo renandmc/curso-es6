@@ -85,3 +85,12 @@ const find = arr.find(function(item) {
   return item === 4;
 });
 console.log(find);
+
+// arrow functions
+const arr2 = [1, 3, 4, 5, 6];
+const newArr2 = arr2.map(item => item * 2);
+console.log(arr2);
+console.log(newArr2);
+
+const teste2 = () => ({ nome: 'Renan'});
+console.log(teste2());

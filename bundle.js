@@ -127,4 +127,19 @@ console.log(filter);
 var find = arr.find(function (item) {
   return item === 4;
 });
-console.log(find);
+console.log(find); // arrow functions
+
+var arr2 = [1, 3, 4, 5, 6];
+var newArr2 = arr2.map(function (item) {
+  return item * 2;
+});
+console.log(arr2);
+console.log(newArr2);
+
+var teste2 = function teste2() {
+  return {
+    nome: 'Renan'
+  };
+};
+
+console.log(teste2());
