@@ -126,3 +126,37 @@ function mostraNome({ nome, idade }) {
   console.log(nome, idade);
 }
 mostraNome(usuario2);
+
+// rest - resto
+const usuario3 = {
+  nome2: 'Renan',
+  idade: 26,
+  empresa: 'L4E'
+};
+const { nome2, ...resto } = usuario3;
+console.log(nome2);
+console.log(resto);
+
+const arr3 = [1, 2, 3, 4];
+const [x, y, ...z] = arr3;
+console.log(x, y, z);
+
+function soma3(...params) {
+  return params.reduce((total, next) => total + next);
+}
+console.log(soma3(1, 3, 4));
+
+// spread
+const arrA = [1, 2, 3];
+const arrB = [4, 5, 6];
+const arrC = [ ...arrA, ...arrB ];
+console.log(arrC);
+
+const usuarioA = {
+  nome: 'Renan',
+  idade: 26,
+  empresa: 'L4E'
+};
+const usuarioB = { ...usuarioA, nome: 'João' };
+console.log(usuarioA);
+console.log(usuarioB);
