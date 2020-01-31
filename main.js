@@ -166,3 +166,18 @@ const nomeA = 'Renan';
 const idadeA = 26;
 //console.log('Meu nome é ' + nomeA + ' e tenho ' + idadeA + ' anos');
 console.log(`Meu nome é ${nomeA} e tenho ${idadeA} anos`);
+
+// object short syntax
+const name = 'Renan';
+const age = 26;
+const user = {
+  name,
+  age,
+  empresa: 'L4E'
+};
+console.log(user);
+
+// aula webpack
+import { somaZ } from './funcoes';
+
+console.log(somaZ(1, 3));
