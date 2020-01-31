@@ -88,4 +88,25 @@ function () {
   return Matematica;
 }();
 
-console.log(Matematica.soma(1, 2));
+console.log(Matematica.soma(1, 2)); // constante - não pode ter valor reatribuido, mas pode ser mutado
+
+var a = 1; //a = 3; // erro a read-only
+
+console.log(a);
+var usuario = {
+  nome: 'Diego'
+};
+usuario.nome = 'Renan';
+console.log(usuario);
+
+function teste(x) {
+  var y = 2;
+
+  if (x > 5) {
+    var _y = 4;
+    console.log(x, _y);
+  }
+} // console.log(y); // erro, fora escopo
+
+
+teste(10);
