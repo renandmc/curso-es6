@@ -223,3 +223,19 @@ const executaPromise2 = async () => {
   console.log(await minhaPromise(), 'await/async ex2');
 }
 executaPromise2();
+
+// configurando axios
+import axios from 'axios';
+
+class Api {
+  static async getUserInfo(username) {
+    try {
+      const response = await axios.get(`https://api.github.com/users/${username}`);
+      console.log(response);
+    } catch(err) {
+      console.warn('Erro na API');
+    }
+  }
+}
+
+Api.getUserInfo('renandmc');
